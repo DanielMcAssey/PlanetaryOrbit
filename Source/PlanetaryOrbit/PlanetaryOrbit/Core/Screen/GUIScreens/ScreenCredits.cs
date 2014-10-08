@@ -45,6 +45,9 @@ namespace PlanetaryOrbit.Core.Screen
             tmpCredit.Position = "UI Library";
             tmpCredit.Name = "Squid UI (XNA)";
             this.mCreditList.Add(tmpCredit);
+            tmpCredit.Position = "Milky Way Background Picture";
+            tmpCredit.Name = "VISTA Space Agency";
+            this.mCreditList.Add(tmpCredit);
             // !AddPeopleToCredits
 
             for (int i = 0; i < this.mCreditList.Count; i++)

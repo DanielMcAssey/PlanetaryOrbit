@@ -30,6 +30,7 @@
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Core\Audio\Music\" />
     <Folder Include="Core\Models\ISS\High\" />
     <Folder Include="Core\Models\Sattelites\Mars\Deimos\High\" />
     <Folder Include="Core\Models\Sattelites\Mars\Phobos\High\" />
@@ -310,13 +311,6 @@
       <Name>globalEffects</Name>
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Core\Audio\Music\music01.mp3">
-      <Name>music01</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SoundEffectProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>

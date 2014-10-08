@@ -60,11 +60,12 @@ namespace PlanetaryOrbit.Core.Screen
             //Initialize SFX
             this._obj_sfx = new List<SoundEffect>();
             this._obj_sfx.Add(this._local_content.Load<SoundEffect>("Core/Audio/Ambient/space01"));
-            this._obj_sfx.Add(this._local_content.Load<SoundEffect>("Core/Audio/Music/music01"));
+            //this._obj_sfx.Add(this._local_content.Load<SoundEffect>("Core/Audio/Music/music01")); //Removed Music
             this._sfx_ambience = this._obj_sfx[0].CreateInstance();
             this._sfx_ambience.IsLooped = true;
             this._sfx_ambience.Volume = 0.1f;
-            this._sfx_music = this._obj_sfx[1].CreateInstance();
+            
+            //this._sfx_music = this._obj_sfx[1].CreateInstance(); //Removed Music
 
             //Initialise Cameras
             this._obj_cameras = new Dictionary<CameraType, BaseCamera>();
@@ -348,7 +349,9 @@ namespace PlanetaryOrbit.Core.Screen
             if (!this._obj_orbitalbodymanager._SIM_MODE)
             {
                 //Play Music
-                this._sfx_music.Play();
+                if(this._sfx_music != null)
+                    this._sfx_music.Play();
+
             }
         }
 
@@ -450,8 +453,15 @@ namespace PlanetaryOrbit.Core.Screen
                 this._obj_gui.infoPanel.Content.Controls[9] = _tmpLabel;
                 //--Update Info Window
 
-                if (this._sfx_music.State == SoundState.Stopped && this._sfx_ambience.State == SoundState.Stopped)
+                if (this._sfx_music != null)
+                {
+                    if (this._sfx_music.State == SoundState.Stopped && this._sfx_ambience.State == SoundState.Stopped)
+                        this._sfx_ambience.Play();
+                }
+                else
+                {
                     this._sfx_ambience.Play();
+                }
 
                 if (this.GlobalInput.IsPressed("PLANET_INFO", this.ControllingPlayer))
                     this.mDrawInfo = !this.mDrawInfo;

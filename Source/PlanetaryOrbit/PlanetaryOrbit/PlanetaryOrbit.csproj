@@ -84,8 +84,6 @@
     <Compile Include="Core\Entities\PlanetRing.cs" />
     <Compile Include="Core\Entities\SolarFlare.cs" />
     <Compile Include="Core\External\RendererXNA.cs" />
-    <Compile Include="Core\Physics\Integrators\Delegates.cs" />
-    <Compile Include="Core\Physics\Integrators\SymplecticPRK.cs" />
     <Compile Include="Core\Physics\OrbitalBody.cs" />
     <Compile Include="Core\Physics\OrbitalBodyManager.cs" />
     <Compile Include="Core\Entities\Skybox.cs" />
@@ -94,7 +92,6 @@
     <Compile Include="Core\Models\BaseModel.cs" />
     <Compile Include="Core\Models\AdvancedModel.cs" />
     <Compile Include="Core\Physics\OrbitalMechanics.cs" />
-    <Compile Include="Core\Physics\OrbitalNBodySystem.cs" />
     <Compile Include="Core\Physics\State.cs" />
     <Compile Include="Core\Physics\Vector3D.cs" />
     <Compile Include="Core\Screen\DefaultScreens\ScreenBG.cs" />

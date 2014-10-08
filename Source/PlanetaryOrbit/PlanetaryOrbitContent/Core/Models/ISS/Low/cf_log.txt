@@ -1,0 +1,1 @@
+Warning: None triangle mesh: ISS (file: 'D:\Programming\Projects\GLOKON\PlanetaryOrbit\Repository\PlanetaryOrbit\PlanetaryOrbit\PlanetaryOrbitContent\Core\Models\ISS\Low\model.fbx') [ (line 0)]

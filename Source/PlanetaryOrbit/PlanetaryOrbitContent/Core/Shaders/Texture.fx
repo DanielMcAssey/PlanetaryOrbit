@@ -63,6 +63,7 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
 	float3 lightDir = normalize(xLightDirection);
 	float3 normal = normalize(input.Normal);
 	float3 view = normalize(input.ViewDirection);
+
 	lighting += saturate(dot(lightDir, normal)) * xLightColor;
 	float3 refl = reflect(lightDir, normal);
 	lighting += pow(saturate(dot(refl, view)), xSpecularIntensity) * xSpecularColor;

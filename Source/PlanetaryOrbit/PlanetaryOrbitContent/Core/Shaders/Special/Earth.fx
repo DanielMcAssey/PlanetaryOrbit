@@ -134,7 +134,7 @@ VertexShaderOutput2 VS_OuterAtmoshpere(VertexShaderInput input,uniform float siz
 	output.Normal = mul(input.Normal, xWorld);
 	output.Position = mul(input.Position, wvp) + (mul(size, mul(input.Normal, wvp)));
 	output.TexCoord = input.TexCoord;
-	output.pos = mul(input.Position,xWorld);
+	output.pos = mul(input.Position, xWorld);
 	
 	return output;
 }
